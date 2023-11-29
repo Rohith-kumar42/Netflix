@@ -19,7 +19,7 @@
             padding: 0;
             overflow: hidden;
            
-            color: black;
+            color:white;
           }
           
           li {
@@ -33,7 +33,7 @@
           li a {
             margin-left: 15px;
             display: block;
-            color: #000000;
+            color:white;
             background-color: transparent;
             text-align: center;
             padding: 14px 16px;
@@ -47,7 +47,7 @@
             text-decoration: none;
             text-shadow:none;
             
-            color: #888;
+            color:white;
           }
           /* width */
 ::-webkit-scrollbar {
@@ -67,27 +67,13 @@
     margin-top: 10px;
 }
 .nav{
-    background-color:#DADADA;
+    background-color:#000000;
+    color: white;
 }
 
-.bg-img {
-  /* The image used */
-  background-image: url("D:\SPOTKNACK\netflix\assets\images\over.png");
-  margin-top: 0px;      
- min-height: 720px;
- width: 100%;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  
-  /* Needed to position the navbar */
-  position: relative;
-}
-/* Handle on hover */
+* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+  background:black; 
 }
 .bottom-left {
   position: absolute;
@@ -122,26 +108,26 @@
     </head>
     <body>
         
-        <ul>
+        <ul style="background-color: #000000;color: white;">
             <div class="nav">
-            <li class="im-g"><img src="D:\SPOTKNACK\netflix\assets\images\Logos-Readability-Netflix-logo.png" width="90px"height="50px"style="margin-top:-11px;"></li>
+            <li class="im-g"><img src="D:\SPOTKNACK\netflix\assets\images\Logos-Readability-Netflix-logo.jpeg" width="90px"height="50px"style="margin-top:-11px;"></li>
             <li class="glow" style="color: #ffffff"><a href="default.asp">Home</a></li>
-            <li><a href="news.asp">TV Shows</a></li>
+            <li style="color: white;"><a href="news.asp">TV Shows</a></li>
             <li><a href="contact.asp">Movies</a></li>
             <li><a href="about.asp">New&Popular</a></li>
             <li><a href="about.asp">MyList</a></li>
             <li><a href="about.asp">Browse by Languages</a></li>
            
-           <li> <button class="searchTab" style="color: black;background-color:transparent;margin-left: 400px;margin-top: 15px;margin-right:-15px;border: none;" tabindex="0" aria-label="Search" data-uia="search-box-launcher"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="search-icon ltr-4z3qvp e1svuwfo1" data-name="MagnifyingGlass" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10ZM15.6177 17.0319C14.078 18.2635 12.125 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10C19 12.125 18.2635 14.078 17.0319 15.6177L22.7071 21.2929L21.2929 22.7071L15.6177 17.0319Z" fill="currentColor"></path></svg></button></li>
+           <li> <button class="searchTab" style="color:white;background-color:transparent;margin-left: 400px;margin-top: 15px;margin-right:-15px;border: none;" tabindex="0" aria-label="Search" data-uia="search-box-launcher"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="search-icon ltr-4z3qvp e1svuwfo1" data-name="MagnifyingGlass" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10ZM15.6177 17.0319C14.078 18.2635 12.125 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10C19 12.125 18.2635 14.078 17.0319 15.6177L22.7071 21.2929L21.2929 22.7071L15.6177 17.0319Z" fill="currentColor"></path></svg></button></li>
             <li ><a href="about.asp">Children</a></li>
-            <li><button style="margin-top: 15px;color: black;background-color:transparent;border: none;" class="notifications-menu" aria-haspopup="true" aria-expanded="false" aria-label="Notifications"><svg width="24" height="24" viewBox="0 0 24 24"  fill="none" xmlns="http://www.w3.org/2000/svg" class="ltr-4z3qvp e1svuwfo1" data-name="Bell" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.0002 4.07092C16.3924 4.55624 19 7.4736 19 11V15.2538C20.0489 15.3307 21.0851 15.4245 22.1072 15.5347L21.8928 17.5232C18.7222 17.1813 15.4092 17 12 17C8.59081 17 5.27788 17.1813 2.10723 17.5232L1.89282 15.5347C2.91498 15.4245 3.95119 15.3307 5.00003 15.2538V11C5.00003 7.47345 7.60784 4.55599 11.0002 4.07086V2H13.0002V4.07092ZM17 15.1287V11C17 8.23858 14.7614 6 12 6C9.2386 6 7.00003 8.23858 7.00003 11V15.1287C8.64066 15.0437 10.3091 15 12 15C13.691 15 15.3594 15.0437 17 15.1287ZM8.62593 19.3712C8.66235 20.5173 10.1512 22 11.9996 22C13.848 22 15.3368 20.5173 15.3732 19.3712C15.3803 19.1489 15.1758 19 14.9533 19H9.0458C8.82333 19 8.61886 19.1489 8.62593 19.3712Z" fill="currentColor"></path></svg></button></li>
+            <li><button style="margin-top: 15px;color:white;background-color:transparent;border: none;" class="notifications-menu" aria-haspopup="true" aria-expanded="false" aria-label="Notifications"><svg width="24" height="24" viewBox="0 0 24 24"  fill="none" xmlns="http://www.w3.org/2000/svg" class="ltr-4z3qvp e1svuwfo1" data-name="Bell" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.0002 4.07092C16.3924 4.55624 19 7.4736 19 11V15.2538C20.0489 15.3307 21.0851 15.4245 22.1072 15.5347L21.8928 17.5232C18.7222 17.1813 15.4092 17 12 17C8.59081 17 5.27788 17.1813 2.10723 17.5232L1.89282 15.5347C2.91498 15.4245 3.95119 15.3307 5.00003 15.2538V11C5.00003 7.47345 7.60784 4.55599 11.0002 4.07086V2H13.0002V4.07092ZM17 15.1287V11C17 8.23858 14.7614 6 12 6C9.2386 6 7.00003 8.23858 7.00003 11V15.1287C8.64066 15.0437 10.3091 15 12 15C13.691 15 15.3594 15.0437 17 15.1287ZM8.62593 19.3712C8.66235 20.5173 10.1512 22 11.9996 22C13.848 22 15.3368 20.5173 15.3732 19.3712C15.3803 19.1489 15.1758 19 14.9533 19H9.0458C8.82333 19 8.61886 19.1489 8.62593 19.3712Z" fill="currentColor"></path></svg></button></li>
             <div class="account-dropdown-button" style="margin-top: 15px ;margin-left: 1350px;"><a href="/YourAccount" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false" aria-label="Santhosh – Account &amp; Settings"><span class="profile-link" role="presentation"><img class="profile-icon" src="https://occ-0-4994-2164.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABY20DrC9-11ewwAs6nfEgb1vrORxRPP9IGmlW1WtKuaLIz8VxCx5NryzDK3_ez064IsBGdXjVUT59G5IRuFdqZlCJCneepU.png?r=229" alt=""></span></a><span class="caret" role="presentation"></span></div>
         
         
         </div>
         </ul>
         <div>
-        <img src="C:\Users\R\Downloads\over.png" width="1526px"height="500px">
+        <img src="D:\SPOTKNACK\netflix\assets\images\over.jpeg" width="1526px"height="500px">
         <div class="bottom-left" style="color: gray;text-shadow: 0px 2px 4px rgba(0,0,0,.45);">Violently pursued by criminals who insist he's a former gangster,<br> a humble cafe owner fights to shield his family<br> — and the truth about his identity</div>
       
         </div>
