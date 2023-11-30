@@ -6,13 +6,13 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+        
         <title>Netflix</title>
         <style>
         body{
             background-color: black;
             font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+            
         } ul{
             list-style-type: none;
             margin: 0;
@@ -34,20 +34,22 @@
             margin-left: 15px;
             display: block;
             color:white;
-            background-color: transparent;
+           
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
           }
           
           
-          /* Change the link color to #111 (black) on hover */
+          
           li a:hover {
-            background-color:none;
-            text-decoration: none;
-            text-shadow:none;
+           
+            text-decoration: underline;
+            text-shadow:black;
             
-            color:white;
+            color: red;
+            
+            
           }
           /* width */
       ::-webkit-scrollbar {
@@ -68,43 +70,28 @@
       }
       .nav{
           background-color:#000000;
-          color: white;
+          
       }
-
+      
       * Handle on hover */
       ::-webkit-scrollbar-thumb:hover {
         background:black; 
       }
       .bottom-left {
         position: absolute;
-        bottom:350px;
+        top:350px;
         left: 100px;
+        color: #ffffff;
       }
+      .column {
+  float: left;
+  width:250px;
+  height: 3%;
+  padding: 5px;
+  
+}
 
-      .top-left {
-        position: absolute;
-        top: 8px;
-        left: 16px;
-      }
-
-      .top-right {
-        position: absolute;
-        top: 8px;
-        right: 16px;
-      }
-
-      .bottom-right {
-        position: absolute;
-        bottom: 8px;
-        right: 16px;
-      }
-
-      .centered {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }</style>
+</style>
     </head>
     <body>
         
@@ -112,7 +99,7 @@
             <div class="nav">
             <li class="im-g"><img src="assets/images/Logos-Readability-Netflix-logo.jpeg" width="90px"height="50px"style="margin-top:-11px;"></li>
             <li class="glow" style="color: #ffffff"><a href="default.asp">Home</a></li>
-            <li style="color: white;"><a href="news.asp">TV Shows</a></li>
+            <li><a href="news.asp">TV Shows</a></li>
             <li><a href="contact.asp">Movies</a></li>
             <li><a href="about.asp">New&Popular</a></li>
             <li><a href="about.asp">MyList</a></li>
@@ -127,9 +114,110 @@
         </div>
         </ul>
         <div>
-        <img src="assets/images/over.jpeg" width="1526px"height="500px">
-        <div class="bottom-left" style="color: gray;text-shadow: 0px 2px 4px rgba(0,0,0,.45);">Violently pursued by criminals who insist he's a former gangster,<br> a humble cafe owner fights to shield his family<br> — and the truth about his identity</div>
+        <img src="assets/images/over.jpeg" width="1536px"height="700px">
+        
+        <div class="bottom-left" style="color: white;text-shadow: 0px 2px 4px rgba(0,0,0,.45);font-size: 18px;">Violently pursued by criminals who insist he's a former gangster,<br> a humble cafe owner fights to shield his family<br> — and the truth about his identity
+        <br>
+        <br><button type="button" id="buttontext"   style="width: 126px;height: 46px;background-color:#ffffff;border-radius: 5px;color: black;font-size: 24px;text-align: center;border-color:black;box-shadow: none;border: none;" class="glyphicon glyphicon-play"><span style="color: white;">..</span><span>Play</span></button>
+        <button type="button"    style="width: 172px;height: 46px;background-color:#6d6d6eb3;border-radius: 5px;color:white;margin-left: 20px;font-size: 24px;text-align: center;border-color:black;box-shadow: none;border: none;" class="selector__glyph-image ltr-1vh9doa"><span> More</span><span style="color:rgba(9, 9, 208, 0.7);">.</span><span>Info</span></button>
+        <p style="margin-top: 70px;font-size: 21px;color: #e5e5e5;font-weight: bold;">Top Pic For You</p>
       
+      <div class="row">
+        <div class="column">
+          <p style="margin-left: 15px;"><a href="https://www.hotstar.com/in/tv/moon-knight/1260089681?utm_source=gwa"><img src="assets/images/8.jpg" alt="Snow" style="height: 133px;width:100%"></a></p>
+        </div>
+        <div class="column">
+          <p style="margin-left: 5px;"><a href="https://www.netflix.com/title/80241318"><img src="assets/images/7.jpg" alt="Forest" style="height:3%;width:100%"></a></p>
+        </div>
+        <div class="column">
+          <p><a href="https://www.hotstar.com/in/tv/loki/1260063451?utm_source=gwa"><img src="assets/images/6.webp" alt="Mountains" style="height:3%;width:100%"></a></p>
+        </div>
+        <div class="column">
+          <p style="height:3%;"><a href="https://www.primevideo.com/dp/amzn1.dv.gti.2d72b8e1-1350-4c32-86f3-cfd1620054a0?autoplay=0&ref_=atv_cf_strg_wb"><img src="assets/images/5.webp"alt="Snow" style="height: 135px;width:100%"></a></p>
+        </div>
+        <div class="column">
+          <p style="height:3%;"><a href="https://www.primevideo.com/dp/amzn1.dv.gti.2d72b8e1-1350-4c32-86f3-cfd1620054a0?autoplay=0&ref_=atv_cf_strg_wb"><img src="https://occ-0-4994-2164.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABbRMgKtt_nxIgZmfzIh4nCB7oDQ6Rw5b4XhtX3t1XheK_F9gZqp5eucX-ZudSso0eCPRwXNXHP3BxWVkVbQLumoUDl3T_XhfeMQGNGuYi9NQnRgatGpnMojH6v6L9NIXfnxNhxtvroAHLjjcj7uzUFBOQBhahPpU8AMkhqBf4ZklTr8hRHNDXaf68pC2RFyCMQYQ_W_3ETC-pdHTUT_Cws4BSfeEoaXHNUvC0mzOX0CgpXbo8RClGIQuGLkGSlMolT7AGX7gWYHEqK4AaRWHU5Ca76IymkcRsEyDGoFbI5qsa3CGJwir4MWpQJSnOYyMhLzMevaSy0Hx9xR8XGJFwQO5MGjzlX27oYCXYcBVzzTMSN2kYWw.jpg?r=03a"alt="Snow" style="height: 135px;width:100%"></a></p>
+        </div>
+      
+      </div>
+        </div><br>
+      
+        </div>
+        <div class="row" style="margin-left: 85px;">
+          <p style="margin-left: 15px;font-size: 21px;color: #e5e5e5;font-weight: bold;">Trending Now</p>
+          <div class="column">
+            <p style="margin-left: 15px;"><a href="https://www.hotstar.com/in/tv/moon-knight/1260089681?utm_source=gwa"><img src="https://occ-0-4994-2164.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABf4aozYAYjrWJpGgfwFiUSVu0m4V2G2FVpQNTc-0dW1yRYSkkv9mIU06_iiJKRMfO80MQLFZnVCA5e4_YQkp5z0KBAo1u5M942dhPbzlvK4p2w4Q6KpTh0jaMwXxBTmd7y6_0FB-L8yPeawi-0gZT-YFcsVmx9Y_VhE6PQRdXHjHSPwZ5MVTSq3BCAwG3tI.jpg?r=216" alt="Snow" style="height: 133px;width:100%"></a></p>
+          </div>
+          <div class="column">
+            <p style="margin-left: 5px;"><a href="https://www.netflix.com/title/80241318"><img src="assets/images/7.webp" alt="Forest" style="height:3%;width:100%"></a></p>
+          </div>
+          <div class="column">
+            <p><a href="https://www.hotstar.com/in/tv/loki/1260063451?utm_source=gwa"><img src="assets/images/13.jpg" alt="Mountains" style="height:3%;width:100%"></a></p>
+          </div>
+          <div class="column">
+            <p style="height:3%;"><a href="https://www.primevideo.com/dp/amzn1.dv.gti.2d72b8e1-1350-4c32-86f3-cfd1620054a0?autoplay=0&ref_=atv_cf_strg_wb"><img src="assets/images/9.webp"alt="Snow" style="height: 135px;width:100%"></a></p>
+          </div>
+          <div class="column">
+            <p style="height:3%;"><a href="https://www.primevideo.com/dp/amzn1.dv.gti.2d72b8e1-1350-4c32-86f3-cfd1620054a0?autoplay=0&ref_=atv_cf_strg_wb"><img src="https://occ-0-4994-2164.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABbRMgKtt_nxIgZmfzIh4nCB7oDQ6Rw5b4XhtX3t1XheK_F9gZqp5eucX-ZudSso0eCPRwXNXHP3BxWVkVbQLumoUDl3T_XhfeMQGNGuYi9NQnRgatGpnMojH6v6L9NIXfnxNhxtvroAHLjjcj7uzUFBOQBhahPpU8AMkhqBf4ZklTr8hRHNDXaf68pC2RFyCMQYQ_W_3ETC-pdHTUT_Cws4BSfeEoaXHNUvC0mzOX0CgpXbo8RClGIQuGLkGSlMolT7AGX7gWYHEqK4AaRWHU5Ca76IymkcRsEyDGoFbI5qsa3CGJwir4MWpQJSnOYyMhLzMevaSy0Hx9xR8XGJFwQO5MGjzlX27oYCXYcBVzzTMSN2kYWw.jpg?r=03a"alt="Snow" style="height: 135px;width:100%"></a></p>
+          </div>
+        
+        </div>
+        <div class="row" style="margin-left: 85px;">
+          <p style="margin-left: 15px;font-size: 21px;color: #e5e5e5;font-weight: bold;">Emmy-winning Binge-worthy US TV Shows</p>
+          <div class="column">
+            <p style="margin-left: 15px;"><a href="https://www.hotstar.com/in/tv/moon-knight/1260089681?utm_source=gwa"><img src="assets/images/10.jpg" alt="Snow" style="height: 133px;width:100%"></a></p>
+          </div>
+          <div class="column">
+            <p style="margin-left: 5px;"><a href="https://www.netflix.com/title/80241318"><img src="assets/images/10.webp" alt="Forest" style="height:3%;width:100%"></a></p>
+          </div>
+          <div class="column">
+            <p><a href="https://www.hotstar.com/in/tv/loki/1260063451?utm_source=gwa"><img src="assets/images/14.jpg" alt="Mountains" style="height:3%;width:100%"></a></p>
+          </div>
+          <div class="column">
+            <p style="height:3%;"><a href="https://www.primevideo.com/dp/amzn1.dv.gti.2d72b8e1-1350-4c32-86f3-cfd1620054a0?autoplay=0&ref_=atv_cf_strg_wb"><img src="assets/images/15.jpg"alt="Snow" style="height: 135px;width:100%"></a></p>
+          </div>
+          <div class="column">
+            <p style="height:3%;"><a href="https://www.primevideo.com/dp/amzn1.dv.gti.2d72b8e1-1350-4c32-86f3-cfd1620054a0?autoplay=0&ref_=atv_cf_strg_wb"><img src="assets/images/16.jpg"alt="Snow" style="height: 135px;width:100%"></a></p>
+          </div>
+        
+        </div>
+        <div class="row" style="margin-left: 85px;">
+          <p style="margin-left: 15px;font-size: 21px;color: #e5e5e5;font-weight: bold;">Trending Now</p>
+          <div class="column">
+            <p style="margin-left: 15px;"><a href="https://www.hotstar.com/in/tv/moon-knight/1260089681?utm_source=gwa"><img src="https://occ-0-4994-2164.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABf4aozYAYjrWJpGgfwFiUSVu0m4V2G2FVpQNTc-0dW1yRYSkkv9mIU06_iiJKRMfO80MQLFZnVCA5e4_YQkp5z0KBAo1u5M942dhPbzlvK4p2w4Q6KpTh0jaMwXxBTmd7y6_0FB-L8yPeawi-0gZT-YFcsVmx9Y_VhE6PQRdXHjHSPwZ5MVTSq3BCAwG3tI.jpg?r=216" alt="Snow" style="height: 133px;width:100%"></a></p>
+          </div>
+          <div class="column">
+            <p style="margin-left: 5px;"><a href="https://www.netflix.com/title/80241318"><img src="assets/images/7.webp" alt="Forest" style="height:3%;width:100%"></a></p>
+          </div>
+          <div class="column">
+            <p><a href="https://www.hotstar.com/in/tv/loki/1260063451?utm_source=gwa"><img src="assets/images/13.jpg" alt="Mountains" style="height:3%;width:100%"></a></p>
+          </div>
+          <div class="column">
+            <p style="height:3%;"><a href="https://www.primevideo.com/dp/amzn1.dv.gti.2d72b8e1-1350-4c32-86f3-cfd1620054a0?autoplay=0&ref_=atv_cf_strg_wb"><img src="assets/images/9.webp"alt="Snow" style="height: 135px;width:100%"></a></p>
+          </div>
+          <div class="column">
+            <p style="height:3%;"><a href="https://www.primevideo.com/dp/amzn1.dv.gti.2d72b8e1-1350-4c32-86f3-cfd1620054a0?autoplay=0&ref_=atv_cf_strg_wb"><img src="https://occ-0-4994-2164.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABbRMgKtt_nxIgZmfzIh4nCB7oDQ6Rw5b4XhtX3t1XheK_F9gZqp5eucX-ZudSso0eCPRwXNXHP3BxWVkVbQLumoUDl3T_XhfeMQGNGuYi9NQnRgatGpnMojH6v6L9NIXfnxNhxtvroAHLjjcj7uzUFBOQBhahPpU8AMkhqBf4ZklTr8hRHNDXaf68pC2RFyCMQYQ_W_3ETC-pdHTUT_Cws4BSfeEoaXHNUvC0mzOX0CgpXbo8RClGIQuGLkGSlMolT7AGX7gWYHEqK4AaRWHU5Ca76IymkcRsEyDGoFbI5qsa3CGJwir4MWpQJSnOYyMhLzMevaSy0Hx9xR8XGJFwQO5MGjzlX27oYCXYcBVzzTMSN2kYWw.jpg?r=03a"alt="Snow" style="height: 135px;width:100%"></a></p>
+          </div>
+        
+        </div>
+        <div class="row" style="margin-left: 85px;">
+          <p style="margin-left: 15px;font-size: 21px;color: #e5e5e5;font-weight: bold;">Trending Now</p>
+          <div class="column">
+            <p style="margin-left: 15px;"><a href="https://www.hotstar.com/in/tv/moon-knight/1260089681?utm_source=gwa"><img src="https://occ-0-4994-2164.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABf4aozYAYjrWJpGgfwFiUSVu0m4V2G2FVpQNTc-0dW1yRYSkkv9mIU06_iiJKRMfO80MQLFZnVCA5e4_YQkp5z0KBAo1u5M942dhPbzlvK4p2w4Q6KpTh0jaMwXxBTmd7y6_0FB-L8yPeawi-0gZT-YFcsVmx9Y_VhE6PQRdXHjHSPwZ5MVTSq3BCAwG3tI.jpg?r=216" alt="Snow" style="height: 133px;width:100%"></a></p>
+          </div>
+          <div class="column">
+            <p style="margin-left: 5px;"><a href="https://www.netflix.com/title/80241318"><img src="assets/images/7.webp" alt="Forest" style="height:3%;width:100%"></a></p>
+          </div>
+          <div class="column">
+            <p><a href="https://www.hotstar.com/in/tv/loki/1260063451?utm_source=gwa"><img src="assets/images/13.jpg" alt="Mountains" style="height:3%;width:100%"></a></p>
+          </div>
+          <div class="column">
+            <p style="height:3%;"><a href="https://www.primevideo.com/dp/amzn1.dv.gti.2d72b8e1-1350-4c32-86f3-cfd1620054a0?autoplay=0&ref_=atv_cf_strg_wb"><img src="assets/images/9.webp"alt="Snow" style="height: 135px;width:100%"></a></p>
+          </div>
+          <div class="column">
+            <p style="height:3%;"><a href="https://www.primevideo.com/dp/amzn1.dv.gti.2d72b8e1-1350-4c32-86f3-cfd1620054a0?autoplay=0&ref_=atv_cf_strg_wb"><img src="https://occ-0-4994-2164.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABbRMgKtt_nxIgZmfzIh4nCB7oDQ6Rw5b4XhtX3t1XheK_F9gZqp5eucX-ZudSso0eCPRwXNXHP3BxWVkVbQLumoUDl3T_XhfeMQGNGuYi9NQnRgatGpnMojH6v6L9NIXfnxNhxtvroAHLjjcj7uzUFBOQBhahPpU8AMkhqBf4ZklTr8hRHNDXaf68pC2RFyCMQYQ_W_3ETC-pdHTUT_Cws4BSfeEoaXHNUvC0mzOX0CgpXbo8RClGIQuGLkGSlMolT7AGX7gWYHEqK4AaRWHU5Ca76IymkcRsEyDGoFbI5qsa3CGJwir4MWpQJSnOYyMhLzMevaSy0Hx9xR8XGJFwQO5MGjzlX27oYCXYcBVzzTMSN2kYWw.jpg?r=03a"alt="Snow" style="height: 135px;width:100%"></a></p>
+          </div>
+        
         </div>
         </body>
 </html>
