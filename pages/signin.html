@@ -2,8 +2,22 @@
 <html lang="en">
     <head>
         <title>Netflix-Signin</title>
-        
-
+        <script src="./netflix.js" type="text/javascript"></script>
+        <script src="./languageSwicher.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="netflixStyle.css">
+        <script>
+            function validateform() {
+                var x = document.forms["myform"]["email"].value;
+      if (x == "" || x == null) {
+        alert("Email must be filled out");
+        return false;}
+        var x = document.forms["myform"]["password"].value;
+      if (x == "" || x == null) {
+        alert("Password must be filled out");
+        return false;}
+       
+      }
+        </script>
 <style>
     body{
         background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/c906271d-7184-4eec-83c9-b6d4c1a068ec/728874a6-eeda-400a-9bcf-a935a1408a4f/IN-en-20231127-popsignuptwoweeks-perspective_alpha_website_small.jpg");
@@ -18,11 +32,12 @@
   background-color: red;
   color: red;
 }
-button:hover{
-    color: #EA0101;
-    background-color: black;
-}
 
+.button1:hover {
+  background-color: #fbfbfb;
+  color:red;
+  cursor: pointer;
+}
 </style>
     </head>
 
@@ -30,26 +45,28 @@ button:hover{
     
     <div style="width: 100%; height: 100%; position: relative">
       
-        <img style="width: 167px; height: 45px; left: 0px; top: 90px; position: absolute" src="../assets/images/1Logos-Readability-Netflix-logo.png" />
+        <img style="width: 167px; height: 45px; left: 0px; top: 90px; position: absolute" src="../assets/images/1Logos-Readability-Netflix-logo.png">
         
     </div>
     
     <div style="width: 450px; height: 660px; position: absolute">
        
         <div style="width: 450px; height: 630px; left: 450px; top: 150px; position: absolute; background: rgba(0, 0, 0, 0.70)">
-            <p style="color: white;margin-left: 50px;margin-top: 50px;font-size: 32px;">Signin</p>
+            <p style="color: white;margin-left: 50px;margin-top: 50px;font-size: 32px;font-weight: 700;">Sign In</p>
         </div>
-        
-        <input type="text" placeholder="Email Or Phone Number" style="border-radius: 7px;width: 314px; height: 48px; left: 495px; top: 288px; position: absolute; color: #020000; font-size: 11px; word-wrap: break-word;background-color: #e8e8e8;border:none">
-        <input type="password" placeholder="Password" style="border-radius: 7px;width: 314px; height: 48px; left: 495px; top: 390px; position: absolute; color: #020000; font-size: 11px; word-wrap: break-word;background-color: #e8e8e8;border:none">
-        <button type="submit" style="width: 324px; height: 48px; left: 495px; top: 490px; position: absolute; background: #EA0101;color: white;border-radius: 7px;border:none">Sign in</button></div>
+        <form action="D:\SPOTKNACK\netflix\index.html" method="post" onsubmit="return validateform()" name="myform">
+        <input type="email" placeholder="Email Or phone Number" style="border-radius: 7px;width: 314px; height: 48px; left: 495px; top: 288px; position: absolute; color: #777171; font-size: 11px; word-wrap: break-word;background-color:rgba(0, 0, 0, 0.70);border:1px solid gray;padding: 5px;font-weight: 500;" name="email" autocomplete="off">
+        <input type="password" placeholder="Password" style="border-radius: 7px;width: 314px; height: 48px; left: 495px; top: 390px; position: absolute; color: #f6f6f6; font-size: 11px; word-wrap: break-word;background-color:rgba(0, 0, 0, 0.70);border:1px solid grey; padding: 5px;" name="password">
+        <button type="submit" style="width: 324px; height: 48px; left: 495px; top: 490px; position: absolute; background: #EA0101;color: white;border-radius: 7px;border:none;font-weight: 700;" class="button1">Sign In</button></div>
          <input type="checkbox" class="checkmark" style="width: 18px; height: 21.6px; left: 505px; top: 565px; position: absolute;">
-            
+        </form> 
             
         <div style="width: 273px; height: 43px; left: 535px; top: 570px; position: absolute; color: #b3b3b3; font-size: 15px; word-wrap: break-word">Remember Me</div>
         <a href="#" style="width: 273px; height: 43px; left: 785px; top: 570px; position: absolute; color: #b3b3b3; font-size: 15px; word-wrap: break-word;text-decoration: none;">Need Help?</a>
         <p style="width: 273px; height: 43px; left: 505px; top: 640px; position: absolute; color: #b3b3b3; font-size: 15px; word-wrap: break-word;">New to Netflix? <a href="#" style="text-decoration: none;color: #ffffff;">SignUp Now</a></p>
         <p style="width: 330px; height: 43px; left: 505px; top: 680px; position: absolute; color: #b3b3b3; font-size: 15px; word-wrap: break-word;">Sign in is protected by Google reCAPTCHA to ensure you’re not a bot.</p>
-        <a  style="width: 324px; height: 48px; left: 665px; top: 713.5px; position: absolute; color:#0071eb;border-radius: 7px;border:none">![CDATA[&lt;b&gt;Learn more.&lt;/b&gt;]]&gt;</a>
+        <a  style="width: 324px; height: 48px; left: 665px; top: 713.5px; position: absolute; color:#0071eb;border-radius: 7px;border:none">Learn more</a>
+   
     </div>
+  
 </body>
