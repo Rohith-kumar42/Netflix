@@ -1,0 +1,888 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.cdnfonts.com/css/netflix-font" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<title>Tv shows</title>
+<style>
+  
+  .swiper-slide {
+     margin-right: -30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 40px;
+    color:#ffffff;
+    position: relative;
+    opacity: 0;
+    transition: opacity 0.3s;
+    margin-left: -20px;
+  }
+
+  .swiper:hover .swiper-button-prev::after,
+  .swiper:hover .swiper-button-next::after {
+    opacity: 1;
+   
+  }
+
+    @media (max-width: 760px) {
+      .swiper-button-next {
+        
+        transform: rotate(90deg);
+      }
+     
+
+      .swiper-button-prev {
+        
+        transform: rotate(90deg);
+      }
+    }
+body{
+  background-color:#000000;
+  font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+  
+  
+}
+ .f{
+          
+color: white;
+ font-size: 325px;
+ font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+ font-weight: 800;
+ word-wrap: break-word;
+ text-shadow:rgb(89, 89, 89);
+        }
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+           
+            color:white;
+          }
+          
+          li {
+            float: left;
+          }
+          .glow{
+            background-color: transparent;
+            color: #fff;
+            font-weight: bold;
+            text-shadow:0px 0px 7px #ffffff;
+          }
+          li a {
+            margin-left: 15px;
+            display: block;
+            color:white;
+           
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+          }
+          .nav{
+            background-color: transparent;
+          }
+          
+          .nav li a:hover {
+            background-color: transparent;
+            
+            
+          }
+          
+          li a:hover {
+           
+            background-color: transparent;
+            color: white; 
+            
+            
+          }
+          /* width */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+      }
+      
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #888; 
+      }
+      .im-g{
+          margin-top: 10px;
+      }
+    
+      
+      * Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background:black; 
+      }
+      .bottom-left {
+        position: absolute;
+        top:350px;
+        left: 100px;
+        color: #ffffff;
+      }
+      .column {
+  float: left;
+  width:250px;
+  height: 3%;
+  padding: 5px;
+  
+}
+
+button:hover{
+  background-color: rgba(
+255,
+255,
+255,
+0.75
+  );
+}
+.f{
+
+  -webkit-text-stroke: 4px rgb(89, 89, 89);;
+  font-family: 'Netflix Font', sans-serif;
+  font-size: 270px;
+                                              
+  
+  display: inline-block;
+}
+       
+.dropdown {
+                position: absolute;
+                display: inline-block;
+                margin-left: 50px;
+               
+            
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #000000;
+                color: white;
+              
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+                padding-top: 5px;
+                margin-left: 270px;
+               
+                
+               
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            .dropdown-content a {
+                color: rgb(255, 255, 255);
+                padding: none;
+             
+                text-decoration: none;
+                display: block;
+            }
+
+            .dropdown-content a:hover {
+                color:#c7c7c7; 
+                text-decoration: underline white;
+            }
+
+            .dropdown:hover .dropbtn {
+              
+                color: white;
+                width: 75px;
+            }
+.video-player{
+    display: none;
+}
+.footer{
+
+  width: fit-content;
+  margin-left: 300px;
+}
+.footer li {
+  list-style-type: none;
+  text-align: center;
+  
+}
+
+.footer li a {
+  text-decoration: none;
+  color:#c7c7c7; 
+  margin-left: 0px;
+  font-size: 15px;
+  /* Added text spacing */
+}
+
+.footer img{
+  width: 35px;
+  height: 29px;
+ 
+  
+}
+.footer-link{
+  padding-right: 100px;
+}
+
+</style>
+    </head>
+    <body style="overflow-x: hidden;">
+        
+        <ul style="background-color: transparent;color: white;">
+            <div class="nav">
+            <li class="im-g"><img src="../assets/images//Logos-Readability-Netflix-logo.jpeg" width="90px"height="50px"style="margin-top:-11px;"></li>
+            <li style="background-color: transparent;"><a href="../index.html">Home</a></li>
+            <li style="color: #fff;" class="glow"><a href="../pages/tvshows.html" >TV Shows</a></li>
+            <li><a href="movies.html">Movies</a></li>
+            <li><a href="news&popular.html">New&Popular</a></li>
+            <li><a href="mylist.html">MyList</a></li>
+            <li><a href="browsebylanguages.html">Browse by Languages</a></li>
+            <li><a href="pages/signin.html" class="Signin">Sign In</a></li>
+           
+           <li> <button class="searchTab" style="color:white;background-color:transparent;margin-left: 400px;margin-top: 12px;margin-right:-15px;border: none;font-size: 20px;"><span class="	glyphicon glyphicon-search" style="color: b;"></span></button></li>
+            <li ><a href="about.asp" style="margin-top: 3px;">Children</a></li>
+            <li><button style="margin-top: 15px;color:white;background-color:transparent;border: none;font-size: 20px;" ><span class="	glyphicon glyphicon-bell" ></span></button></li>
+            <div class="account-dropdown-button" style="margin-top: 15px ;margin-left: 1350px;"><a href="/YourAccount" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false" aria-label="Santhosh – Account &amp; Settings"><span class="profile-link" role="presentation"><img class="profile-icon" src="https://occ-0-4994-2164.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABY20DrC9-11ewwAs6nfEgb1vrORxRPP9IGmlW1WtKuaLIz8VxCx5NryzDK3_ez064IsBGdXjVUT59G5IRuFdqZlCJCneepU.png?r=229" alt=""></span></a><span class="caret" role="presentation"></span></div>
+        
+        
+        </div>
+        </ul>
+        <div class="main-player" >
+          <div class="image-player" style="position: relative;">
+            <img src="../assets/images/tvshows/over.webp" width="1536px" height="700px">
+            <img src="../assets/images/tvshows/over1.webp" style="position: absolute; top:80px; left: 50px; width: 650px; height: 256px;">
+          
+           <div class="buttom-left" style="color: white;text-shadow: 0px 2px 4px rgba(0,0,0,.45);font-size: 18px;">
+              <p style="margin-top: -350px;margin-left: 050px;">
+                With firsthand accounts and access to prominent figures around<br> the world, this comprehensive docuseries explores the Cold War<br> and its aftermath.          <br>
+              </p>
+            
+              <video width="1500px" height="500px" autoplay
+              controls="false" class="video-player" style="margin-top: -425px;height: 900px;width: 1536px;">
+               
+              <source src="../assets/videoplayback.mp4" type="video/mp4">
+                  type="video/mp4">
+          </video>
+          </div>
+          
+          <div style="margin-top: -380px;">
+           
+              <div class="dropdown" >
+               <div > <span style="color: white;font-size: 38px;font-weight: 500;">TV Shows</span> 
+                  <button class="dropbtn" style="width: 95px;background-color: #000000;color: white;border-color:#c7c7c7;border-style:double;margin-left: 15px;"><span style="margin-left: -5px;">GENRE</span> <span style="color: #000000;">..</span><span >&#11206</span></button>
+                </div>
+                  <div class="dropdown-content" style="width:max-content;">
+                      <div class="row" style="padding: 10px;">
+                          <div class="col-md-2">
+                              <a href="thriller.html" style="padding-right: 55px;">Indian</a>
+                          </div>
+                          <div class="col-md-2">
+                              <a href="fantasy.html"style="padding-left: 25px;" >Action</a>
+                          </div>
+                          <div class="col-md-2">
+                              <a href="thriller.html" style="padding-left: 45px;">Thriller</a>
+                          </div>
+                          
+                      </div>
+                      <div class="row" style="padding: 10px;padding-right: 0px;">
+                          <div class="col-md-2">
+                              <a href="horror.html" style="padding-right: 25px;">US</a>
+                          </div>
+                          <div class="col-md-2">
+                              <a href="romance.html" style="padding-left: 25px;">Comedies</a>
+                          </div>
+                          <div class="col-md-2">
+                              <a href="thriller.html" style="padding-left: 45px;">Teen</a>
+                          </div>
+                        
+                      </div>
+                      <div class="row" style="padding: 10px;">
+                          <div class="col-md-2">
+                              <a href="sci-fi.html" style="padding-right: 35px;width: max-content;">British</a>
+                          </div>
+                          <div class="col-md-4">
+                              <a href="thriller.html" style="padding-left: 25px;">Sci-Fi</a>
+                          </div>
+                          <div class="col-md-3">
+                              <a href="thriller.html" style="margin-left: -10px;">Anime</a>
+                          </div>
+                          
+                      </div>
+                      <div class="row" style="padding: 10px;">
+                          <div class="col-md-2">
+                              <a href="western.html" style="padding-right: 55px;">European</a>
+                          </div>
+                          <div class="col-md-2">
+                              <a href="animation.html" style="padding-left: 25px;">Crime</a>
+                          </div>
+                          <div class="col-md-2">
+                              <a href="thriller.html" style="padding-left: 50px;">Science</a>
+                          </div>
+                         
+                        
+                      </div>
+                      <div class="row" style="padding: 10px;">
+                          <div class="col-md-2">
+                              <a href="sci-fi.html" style="width: max-content;">Asian</a>
+                          </div>
+                          <div class="col-md-2">
+                              <a href="thriller.html" style="padding-left: 25px;">Kids</a>
+                          </div>
+                          <div class="col-md-2">
+                              <a href="thriller.html" style="padding-left: 50px;">Foods</a>
+                          </div>
+                          
+                      </div>
+                      <div class="row" style="padding: 10px;">
+                          <div class="col-md-2">
+                              <a href="sci-fi.html" >Family</a>
+                          </div>
+                          <div class="col-md-2">
+                            <a href="sci-fi.html" style="padding-left: 25px;">Docuseries</a>
+                        </div>
+                       
+                      </div>
+                      <div class="row" style="padding: 10px;">
+                        <div class="col-md-2">
+                            <a href="sci-fi.html" style="width: max-content;">Reality</a>
+                        </div>
+                        <div class="col-md-2">
+                          <a href="sci-fi.html" style="padding-left: 25px;">Romance</a>
+                      </div>
+                     
+                    </div>
+                      </div>
+                  </div>
+          </div>
+      
+          <br>
+          <br>
+          <div class="play-button">
+              <button   type="button" id="buttontext"   style="width: 126px;height: 46px;background-color:#ffffff;border-radius: 5px;color: black;font-size: 24px;text-align: center;border-color:black;box-shadow: none;border: none;margin-top: 355px;margin-left: 50px;" class="glyphicon glyphicon-play"><span style="color: white;">..</span><span>Play</span></button></div>
+          
+          
+          
+          <div style="margin-top: -45px;margin-left: 195px;" class="moreinfo-button"><button type="button"    style="width: 172px;height: 46px;background-color:#6d6d6eb3;border-radius: 5px;color:white;font-size: 24px;text-align: center;border-color:black;box-shadow: none;border: none;" class="selector__glyph-image ltr-1vh9doa"><div><img src="../assets/images/Group 43.png" style="padding: 5px;margin-left: -15px;">
+              <span style="padding-bottom: -10px;padding-top: 35px;text-align: center;"> More</span><span style="color:#6d6d6eb3">.</span><span style="padding-top: 5px;padding-bottom: -15px;text-align: center;">Info</span></div></button>
+          </div>
+        
+        
+      </div></div><br>
+        
+        
+      <div class="row " style="margin-top: 15px;">
+          
+           
+        
+        <div class="swiper" style="margin-left: 100px;">
+          <p style="margin-left: -0px;font-size: 21px;color: #e5e5e5;font-weight: bold;overflow-x:inherit;">US TV Dramas</p>   
+          <div class="swiper-wrapper">
+            
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/9.webp" alt="Snow" style="height: 133px;width:100%;margin-right:15px"></p>
+            </div>
+            
+</div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/10.jpg" alt="Snow" style="height: 133px;width:100%;"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/11.webp" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/12.webp" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/13.webp" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/14.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/15.webp" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/16.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/17.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/18.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/19.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/20.webp" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+          </div>
+          <div class="swiper-button-next" style="color: #000;"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      
+      </div>
+      <div class="row ">
+        
+         
+        <p style="margin-left: 95px;font-size: 21px;color: #e5e5e5;font-weight: bold;">TV Comedies</p>
+        <div class="swiper" style="margin-left: 100px;">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/21.webp" alt="Snow" style="height: 133px;width:100%;margin-right:15px"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/22.webp" alt="Snow" style="height: 133px;width:100%;"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/23.webp" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/24.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/25.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/26.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/27.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/28.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/29.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/30.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/31.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/32.webp" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/33.webp" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/34.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+           
+          </div>
+          <div class="swiper-button-next" ></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      
+      </div>
+      <div class="row ">
+        
+         
+        <p style="margin-left: 95px;font-size: 21px;color: #e5e5e5;font-weight: bold;">Trending Now</p>
+        <div class="swiper" style="margin-left: 100px;">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/37.jpg" alt="Snow" style="height: 133px;width:100%;margin-right:15px"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/38.jpg" alt="Snow" style="height: 133px;width:100%;"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/39.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/40.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/41.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/42.webp" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/43.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/44.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/45.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/46.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/47.webp" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/48.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/49.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/50.webp" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+           
+          </div>
+          <div class="swiper-button-next" ></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      
+      </div>
+      
+      
+      <div class="row ">
+        
+         
+        <p style="margin-left: 95px;font-size: 21px;color: #e5e5e5;font-weight: bold;">US TV shows</p>
+        <div class="swiper" style="margin-left: 100px;">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/51.jpg" alt="Snow" style="height: 133px;width:100%;margin-right:15px"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/44.jpg" alt="Snow" style="height: 133px;width:100%;"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/31.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/22.webp" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/36.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/33.webp" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/10.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/11.webp" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/12.webp" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/19.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/20.webp" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/48.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/46.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/tvshows/42.webp" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+           
+          </div>
+          <div class="swiper-button-next" ></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      
+      </div>
+    
+    
+   
+    <p class="f" style="top: 50px;margin-left: -10px;top: -150px;">1</p>
+ <img src="../assets/images/tvshows/1.jpg" style="width: 133px;height: 172px;margin-top: -180px;margin-left: -70px; ;">
+    <div class="f">2</div>
+    <img src="../assets/images/tvshows/2.jpg" style="width: 133px;height: 172px;margin-top: -180px;margin-left: -70px;">
+    <div class="f">3</div>
+    <img src="../assets/images/tvshows/3.jpg" style="width: 133px;height: 172px;margin-top: -180px;margin-left: -70px;">
+    <div class="f">4</div>
+    <img src="../assets/images/tvshows/4.jpg" style="width: 133px;height: 172px;margin-top: -180px;margin-left: -70px;">
+    <div class="f">5</div>
+    <img src="../assets/images/tvshows/5.jpg" style="width: 133px;height: 172px;margin-top: -180px;margin-left: -70px;">
+    <div class="f">6</div>
+    <img src="../assets/images/tvshows/6.jpg" style="width: 133px;height: 172px;margin-top: -405px;margin-left: 1340px;">
+
+    <div class="row ">
+        
+         
+      <p style="margin-left: 95px;font-size: 21px;color: #e5e5e5;font-weight: bold;">Casual Viewing</p>
+      <div class="swiper" style="margin-left: 100px;">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/tvshows/20.webp" alt="Snow" style="height: 133px;width:100%;margin-right:15px"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/tvshows/52.webp" alt="Snow" style="height: 133px;width:100%;"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/tvshows/53.webp" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/tvshows/23.webp" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/tvshows/54.webp" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/tvshows/55.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/tvshows/56.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/tvshows/57.webp" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/tvshows/58.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/tvshows/59.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/tvshows/60.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/tvshows/61.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/tvshows/62.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/tvshows/63.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+         
+        </div>
+        <div class="swiper-button-next" ></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    
+    </div>
+    <div class="row ">
+        
+         
+      <p style="margin-left: 95px;font-size: 21px;color: #e5e5e5;font-weight: bold;">Relentless Crime Dramas</p>
+      <div class="swiper" style="margin-left: 100px;">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/tvshows/79.jpg" alt="Snow" style="height: 133px;width:100%;margin-right:15px"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/tvshows/126.jpg" alt="Snow" style="height: 133px;width:100%;"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/tvshows/111.webp" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/tvshows/82.webp" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/tvshows/83.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/tvshows/84.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/tvshows/85.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/tvshows/86.webp" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/tvshows/87.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/tvshows/88.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/tvshows/89.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/tvshows/90.webp" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/tvshows/91.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/tvshows/92.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+         
+        </div>
+        <div class="swiper-button-next" ></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    
+    </div>
+</div>
+<div class="row ">
+        
+         
+<p style="margin-left: 95px;font-size: 21px;color: #e5e5e5;font-weight: bold;">TV Sci-Fi & Fantasy</p>
+<div class="swiper" style="margin-left: 100px;">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><div class="column">
+      <p ><img src="../assets/images/tvshows/98.jpg" alt="Snow" style="height: 133px;width:100%;margin-right:15px"></p>
+    </div></div>
+    <div class="swiper-slide"><div class="column">
+      <p ><img src="../assets/images/tvshows/99.jpg" alt="Snow" style="height: 133px;width:100%;"></p>
+    </div></div>
+    <div class="swiper-slide"><div class="column">
+      <p ><img src="../assets/images/tvshows/88.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+    </div></div>
+    <div class="swiper-slide"><div class="column">
+      <p ><img src="../assets/images/tvshows/100.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+    </div></div>
+    <div class="swiper-slide"><div class="column">
+      <p ><img src="../assets/images/tvshows/101.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+    </div></div>
+    <div class="swiper-slide"><div class="column">
+      <p ><img src="../assets/images/tvshows/102.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+    </div></div>
+    <div class="swiper-slide"><div class="column">
+      <p ><img src="../assets/images/tvshows/103.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+    </div></div>
+    <div class="swiper-slide"><div class="column">
+      <p ><img src="../assets/images/tvshows/104.webp" alt="Snow" style="height: 133px;width:100%"></p>
+    </div></div>
+    <div class="swiper-slide"><div class="column">
+      <p ><img src="../assets/images/tvshows/105.webp" alt="Snow" style="height: 133px;width:100%"></p>
+    </div></div>
+    <div class="swiper-slide"><div class="column">
+      <p ><img src="../assets/images/tvshows/106.webp" alt="Snow" style="height: 133px;width:100%"></p>
+    </div></div>
+    <div class="swiper-slide"><div class="column">
+      <p ><img src="../assets/images/tvshows/107.webp" alt="Snow" style="height: 133px;width:100%"></p>
+    </div></div>
+    <div class="swiper-slide"><div class="column">
+      <p ><img src="../assets/images/tvshows/108.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+    </div></div>
+    <div class="swiper-slide"><div class="column">
+      <p ><img src="../assets/images/tvshows/109.webp" alt="Snow" style="height: 133px;width:100%"></p>
+    </div></div>
+    <div class="swiper-slide"><div class="column">
+      <p ><img src="../assets/images/tvshows/110.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+    </div></div>
+   
+  </div>
+  
+  <div class="swiper-button-next" ></div>
+  <div class="swiper-button-prev"></div>
+</div>
+
+<div class="footer">
+  <div class="footer-images">
+    
+    <img src="../assets/images/yotube.jpg" style="margin-left:10px ;height: 55px;margin-top: -13px;" alt="yotube">
+    <img src="../assets/images/download (2).png" style="margin-top: -11px;" alt="insta">
+    <img src="../assets/images/28 (2).jpg" style="margin-top: -11px;" alt="insta">
+   
+  </div>
+  <div class="footer-links" >
+    <ul>
+      <li>
+        <a href="index.html" class="footer-link">Audio Description</a>
+      </li>
+      <li>
+        <a href="tvshows.html" class="footer-link">Help center</a>
+      </li>
+      <li>
+        <a href="tvshows.html" class="footer-link">Gift Cards</a>
+      </li>
+      <li>
+        <a href="tvshows.html" class="footer-link">Media Center</a>
+      </li>
+    </ul>
+  </div>
+  <div class="footer-links" >
+    <ul>
+      <li>
+        <a href="index.html" class="footer-link">Investor Relations</a>
+      </li>
+      <li>
+        <a href="tvshows.html" class="footer-link">Jobs</a>
+      </li>
+      <li>
+        <a href="tvshows.html" class="footer-link" style="padding-left: 65px;">Terms of Use</a>
+      </li>
+      <li>
+        <a href="tvshows.html" class="footer-link" style="margin-left: -20px;">Privacy</a>
+      </li>
+    </ul>
+  </div>
+  <div class="footer-links" style="padding-right: auto;">
+    <ul>
+      <li>
+        <a href="index.html" class="footer-link">Legal Notices</a>
+      </li>
+      <li>
+        <a href="tvshows.html" class="footer-link" style="margin-left: 30px;">Cookies Preference</a>
+      </li>
+      <li>
+        <a href="tvshows.html" class="footer-link" style="margin-left: -50px;" >Corporate Information</a>
+      </li>
+      <li>
+        <a href="tvshows.html" class="footer-link" style="margin-left: -85px;">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+  <br>
+  <br>
+<div >
+  <button style="padding: 6px;width: 93px;height: 30px;font-size: 13px;color: #808080;background-color: #000;border-color: #808080;border-style: double;padding-bottom: 18px;margin-left: 15px;">Service Code</button>
+  <br>
+
+</div>
+<br>
+<br>
+<p style="margin-left: 15px;">© 1997-2023 Netflix,Inc.</p>
+</div>
+</div>
+
+  </body>
+<script>
+  var swiper = new Swiper('.swiper', {
+    slidesPerView: 5,
+    direction: getDirection(),
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    on: {
+      resize: function () {
+        swiper.changeDirection(getDirection());
+        swiper.params.slidesPerView = getSlidesPerView();
+        swiper.update();
+      },
+    },
+    on: {
+      resize: function () {
+        swiper.changeDirection(getDirection());
+      },
+    },
+  });
+
+  function getDirection() {
+    var windowWidth = window.innerWidth;
+    var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+
+    return direction;
+  }
+  
+</script>
+</html>

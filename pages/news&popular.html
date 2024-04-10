@@ -1,0 +1,627 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.cdnfonts.com/css/netflix-font" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<title>News&Popular</title>
+<style>
+  
+  .swiper-slide {
+     margin-right: -30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 40px;
+    color:#ffffff;
+    position: relative;
+    opacity: 0;
+    transition: opacity 0.3s;
+    margin-left: -20px;
+  }
+
+  .swiper:hover .swiper-button-prev::after,
+  .swiper:hover .swiper-button-next::after {
+    opacity: 1;
+   
+  }
+
+    @media (max-width: 760px) {
+      .swiper-button-next {
+        
+        transform: rotate(90deg);
+      }
+     
+
+      .swiper-button-prev {
+        
+        transform: rotate(90deg);
+      }
+    }
+body{
+  background-color:#000000;
+  font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+  
+  
+}
+ .f{
+          
+color: white;
+ font-size: 325px;
+ font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+ font-weight: 800;
+ word-wrap: break-word;
+ text-shadow:rgb(89, 89, 89);
+        }
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+           
+            color:white;
+          }
+          
+          li {
+            float: left;
+          }
+          .glow{
+            background-color: transparent;
+            color: #fff;
+            font-weight: bold;
+            text-shadow:0px 0px 7px #ffffff;
+          }
+          li a {
+            margin-left: 15px;
+            display: block;
+            color:white;
+           
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+          }
+          .nav{
+            background-color: transparent;
+          }
+          
+          .nav li a:hover {
+            background-color: transparent;
+            
+            
+          }
+          
+          li a:hover {
+           
+            background-color: transparent;
+            color: white; 
+            
+            
+          }
+          /* width */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+      }
+      
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #888; 
+      }
+      .im-g{
+          margin-top: 10px;
+      }
+    
+      
+      * Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background:black; 
+      }
+      .bottom-left {
+        position: absolute;
+        top:350px;
+        left: 100px;
+        color: #ffffff;
+      }
+      .column {
+  float: left;
+  width:250px;
+  height: 3%;
+  padding: 5px;
+  
+}
+
+button:hover{
+  background-color: rgba(
+255,
+255,
+255,
+0.75
+  );
+}
+.f{
+
+  -webkit-text-stroke: 4px rgb(89, 89, 89);;
+  font-family: 'Netflix Font', sans-serif;
+  font-size: 270px;
+                                              
+  
+  display: inline-block;
+}
+       
+.dropdown {
+                position: absolute;
+                display: inline-block;
+                margin-left: 50px;
+               
+            
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #000000;
+                color: white;
+              
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+                margin-left: 145px;
+               
+                
+               
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            .dropdown-content a {
+                color: rgb(255, 255, 255);
+                padding: none;
+             
+                text-decoration: none;
+                display: block;
+            }
+
+            .dropdown-content a:hover {
+                color:#c7c7c7; 
+                text-decoration: underline white;
+            }
+
+            .dropdown:hover .dropbtn {
+              
+                color: white;
+                width: 75px;
+            }
+.video-player{
+    display: none;
+}
+.footer{
+
+  width: fit-content;
+  margin-left: 300px;
+}
+.footer li {
+  list-style-type: none;
+  text-align: center;
+  
+}
+
+.footer li a {
+  text-decoration: none;
+  color:#c7c7c7; 
+  margin-left: 0px;
+  font-size: 15px;
+  /* Added text spacing */
+}
+
+.footer img{
+  width: 35px;
+  height: 29px;
+ 
+  
+}
+.footer-link{
+  padding-right: 100px;
+}
+.heading-slide{
+  display: none;
+}
+.heading:hover .heading-slide {
+  color: #54b9c5;
+ 
+  margin-top: -30px;
+  margin-left: 10px;
+ 
+    transition: max-width 1s, opacity 1s, transform .75s;
+  display: inline-block;
+}
+</style>
+    </head>
+    <body style="overflow-x: hidden;">
+        
+        <ul style="background-color: transparent;color: white;">
+            <div class="nav">
+              
+            <li class="im-g"><img src="../assets/images//Logos-Readability-Netflix-logo.jpeg" width="90px"height="50px"style="margin-top:-11px;"></li>
+            <!-- <div class="dropdown"> -->
+              <!-- <button class="dropbtn" style="width: 95px;background-color: #000000;color: white;border-color:#c7c7c7;border-style:double;margin-left: 15px;"><span style="margin-left: -5px;">MENU</span> <span style="color: #000000;">..</span><span >&#11206</span></button>
+              <div class="dropdown-content">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../pages/tvshows.html">TV Shows</a></li>
+                <li><a href="contact.asp">Movies</a></li>
+                <li><a href="about.asp">New&Popular</a></li>
+                <li><a href="about.asp">MyList</a></li>
+                <li><a href="about.asp">Browse by Languages</a></li>
+                <li><a href="pages/signin.html" class="Signin">Sign In</a></li>
+              </div>
+            </div> -->
+
+            <li style="background-color: transparent;"><a href="../index.html">Home</a></li>
+            <li ><a href="../pages/tvshows.html" >TV Shows</a></li>
+            <li ><a href="movies.html">Movies</a></li>
+            <li  class="glow"><a href="about.asp">New&Popular</a></li>
+            <li><a href="mylist.html">MyList</a></li>
+            <li><a href="browsebylanguages.html">Browse by Languages</a></li>
+            <li><a href="pages/signin.html" class="Signin">Sign In</a></li>
+           
+           <li> <button class="searchTab" style="color:white;background-color:transparent;margin-left: 400px;margin-top: 12px;margin-right:-15px;border: none;font-size: 20px;"><span class="	glyphicon glyphicon-search" style="color: b;"></span></button></li>
+            <li ><a href="about.asp" style="margin-top: 3px;">Children</a></li>
+            <li><button style="margin-top: 15px;color:white;background-color:transparent;border: none;font-size: 20px;" ><span class="	glyphicon glyphicon-bell" ></span></button></li>
+            <div class="account-dropdown-button" style="margin-top: 15px ;margin-left: 1350px;"><a href="/YourAccount" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false" aria-label="Santhosh – Account &amp; Settings"><span class="profile-link" role="presentation"><img class="profile-icon" src="https://occ-0-4994-2164.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABY20DrC9-11ewwAs6nfEgb1vrORxRPP9IGmlW1WtKuaLIz8VxCx5NryzDK3_ez064IsBGdXjVUT59G5IRuFdqZlCJCneepU.png?r=229" alt=""></span></a><span class="caret" role="presentation"></span></div>
+        
+        
+        </div>
+        </ul>
+     <br>
+        
+        
+      <div class="row " style="margin-top: 15px;">
+          
+           
+        
+        <div class="swiper" style="margin-left: 100px;">
+          <p style="margin-left: -0px;font-size: 21px;color: #e5e5e5;font-weight: bold;overflow-x:inherit;" class="heading">New On Netflix<span class="heading-slide">   Explore all ></span></p>   
+          <div class="swiper-wrapper">
+            
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/new&popular/1.webp" alt="Snow" style="height: 133px;width:100%;margin-right:15px"></p>
+            </div>
+            
+</div>
+           
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/new&popular/7.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/new&popular/8.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/new&popular/7.webp" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/new&popular/9.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/new&popular/10.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/new&popular/11.webp" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+          </div>
+          <div class="swiper-button-next" style="color: #000;"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      
+      </div>
+      
+      
+      
+      
+      <div class="row ">
+        
+         
+        <p style="margin-left: 95px;font-size: 21px;color: #e5e5e5;font-weight: bold;" class="heading">Tamil Language Dramas<span class="heading-slide">   Explore all ></span></p>
+        <div class="swiper" style="margin-left: 100px;">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/new&popular/15.jpg" alt="Snow" style="height: 133px;width:100%;margin-right:15px"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/new&popular/16.jpg" alt="Snow" style="height: 133px;width:100%;"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/new&popular/17.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/new&popular/18.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/new&popular/19.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/new&popular/14.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/new&popular/21.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/new&popular/22.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/new&popular/23.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/new&popular/24.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/new&popular/11.webp" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/new&popular/12.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/new&popular/13.webp" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+            <div class="swiper-slide"><div class="column">
+              <p ><img src="../assets/images/new&popular/14.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+            </div></div>
+           
+          </div>
+          <div class="swiper-button-next" ></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      
+      </div>
+   <div>
+    <h3 style="margin-left: 50px;margin-bottom: -50px;color: #fff;">Top 10 Indian Shows in India Today</h3>
+   
+    <p class="f" style="top: 50px;margin-left: -10px;margin-top: -350px;">1</p>
+ <img src="../assets/images/new&popular/25.jpg" style="width: 133px;height: 172px;margin-top: -180px;margin-left: -70px; ;">
+    <div class="f">2</div>
+    <img src="../assets/images/new&popular/26.jpg" style="width: 133px;height: 172px;margin-top: -180px;margin-left: -70px;">
+    <div class="f">3</div>
+    <img src="../assets/images/new&popular/27.jpg" style="width: 133px;height: 172px;margin-top: -180px;margin-left: -70px;">
+    <div class="f">4</div>
+    <img src="../assets/images/new&popular/28.jpg" style="width: 133px;height: 172px;margin-top: -180px;margin-left: -70px;">
+    <div class="f">5</div>
+    <img src="../assets/images/new&popular/29.jpg" style="width: 133px;height: 172px;margin-top: -180px;margin-left: -70px;">
+    <div class="f">6</div>
+    <img src="../assets/images/new&popular/30.jpg" style="width: 133px;height: 172px;margin-top: -405px;margin-left: 1340px;">
+    <h3 style="margin-left: 50px;margin-bottom: -50px;color: #fff;margin-top: -50px;">Top 10 Indian Movies in India Today</h3>
+    <p class="f" style="top: 50px;margin-left: -10px;top: -150px;">1</p>
+ <img src="../assets/images/new&popular/31.webp" style="width: 133px;height: 172px;margin-top: -180px;margin-left: -70px; ;">
+    <div class="f">2</div>
+    <img src="../assets/images/new&popular/32.jpg" style="width: 133px;height: 172px;margin-top: -180px;margin-left: -70px;">
+    <div class="f">3</div>
+    <img src="../assets/images/new&popular/33.webp" style="width: 133px;height: 172px;margin-top: -180px;margin-left: -70px;">
+    <div class="f">4</div>
+    <img src="../assets/images/new&popular/34.jpg" style="width: 133px;height: 172px;margin-top: -180px;margin-left: -70px;">
+    <div class="f">5</div>
+    <img src="../assets/images/new&popular/35.webp" style="width: 133px;height: 172px;margin-top: -180px;margin-left: -70px;">
+    <div class="f">6</div>
+    <img src="../assets/images/new&popular/36.webp" style="width: 133px;height: 172px;margin-top: -405px;margin-left: 1340px;">
+    <div class="row ">
+        
+         
+      <p style="margin-left: 95px;font-size: 21px;color: #e5e5e5;font-weight: bold;" class="heading">Coming Next Week <span class="heading-slide">   Explore all ></span></p>
+      <div class="swiper" style="margin-left: 100px;">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/new&popular/37.jpg" alt="Snow" style="height: 133px;width:100%;margin-right:15px"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/new&popular/38.jpg" alt="Snow" style="height: 133px;width:100%;"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/new&popular/39.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/new&popular/40.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/new&popular/41.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/new&popular/42.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/new&popular/43.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/new&popular/44.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/new&popular/45.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/new&popular/46.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/new&popular/47.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/new&popular/48.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/new&popular/49.webp" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/new&popular/50.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+         
+        </div>
+        <div class="swiper-button-next" ></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    
+    </div>
+    <div class="row ">
+        
+         
+      <p style="margin-left: 95px;font-size: 21px;color: #e5e5e5;font-weight: bold;" class="heading">Coming This Week<span class="heading-slide">   Explore all ></span></p>
+      <div class="swiper" style="margin-left: 100px;">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/new&popular/51.jpg" alt="Snow" style="height: 133px;width:100%;margin-right:15px"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/new&popular/52.webp" alt="Snow" style="height: 133px;width:100%;"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/new&popular/53.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/new&popular/54.webp" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/new&popular/55.webp" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/new&popular/56.webp" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/new&popular/57.webp" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/new&popular/58.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/new&popular/59.webp" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/new&popular/60.webp" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/new&popular/61.webp" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/new&popular/62.webp" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/new&popular/63.jpg" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+          <div class="swiper-slide"><div class="column">
+            <p ><img src="../assets/images/new&popular/64.webp" alt="Snow" style="height: 133px;width:100%"></p>
+          </div></div>
+         
+        </div>
+        <div class="swiper-button-next" ></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    
+    </div>
+    <div class="footer">
+        <div class="footer-images">
+          
+          <img src="../assets/images/yotube.jpg" style="margin-left:10px ;height: 55px;margin-top: -13px;" alt="yotube">
+          <img src="../assets/images/download (2).png" style="margin-top: -11px;" alt="insta">
+          <img src="../assets/images/28 (2).jpg" style="margin-top: -11px;" alt="insta">
+         
+        </div>
+        <div class="footer-links" >
+          <ul>
+            <li>
+              <a href="index.html" class="footer-link">Audio Description</a>
+            </li>
+            <li>
+              <a href="tvshows.html" class="footer-link">Help center</a>
+            </li>
+            <li>
+              <a href="tvshows.html" class="footer-link">Gift Cards</a>
+            </li>
+            <li>
+              <a href="tvshows.html" class="footer-link">Media Center</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-links" >
+          <ul>
+            <li>
+              <a href="index.html" class="footer-link">Investor Relations</a>
+            </li>
+            <li>
+              <a href="tvshows.html" class="footer-link">Jobs</a>
+            </li>
+            <li>
+              <a href="tvshows.html" class="footer-link" style="padding-left: 65px;">Terms of Use</a>
+            </li>
+            <li>
+              <a href="tvshows.html" class="footer-link" style="margin-left: -20px;">Privacy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-links" style="padding-right: auto;">
+          <ul>
+            <li>
+              <a href="index.html" class="footer-link">Legal Notices</a>
+            </li>
+            <li>
+              <a href="tvshows.html" class="footer-link" style="margin-left: 30px;">Cookies Preference</a>
+            </li>
+            <li>
+              <a href="tvshows.html" class="footer-link" style="margin-left: -50px;" >Corporate Information</a>
+            </li>
+            <li>
+              <a href="tvshows.html" class="footer-link" style="margin-left: -85px;">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <br>
+        <br>
+      <div >
+        <button style="padding: 6px;width: 93px;height: 30px;font-size: 13px;color: #808080;background-color: #000;border-color: #808080;border-style: double;padding-bottom: 18px;margin-left: 15px;">Service Code</button>
+        <br>
+      
+      </div>
+      <br>
+      <br>
+      <p style="margin-left: 15px;">© 1997-2023 Netflix,Inc.</p>
+      </div>
+</div>
+
+
+  </body>
+<script>
+  var swiper = new Swiper('.swiper', {
+    slidesPerView: 5,
+    direction: getDirection(),
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    on: {
+      resize: function () {
+        swiper.changeDirection(getDirection());
+        swiper.params.slidesPerView = getSlidesPerView();
+        swiper.update();
+      },
+    },
+    on: {
+      resize: function () {
+        swiper.changeDirection(getDirection());
+      },
+    },
+  });
+
+  function getDirection() {
+    var windowWidth = window.innerWidth;
+    var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+
+    return direction;
+  }
+  
+</script>
+</html>

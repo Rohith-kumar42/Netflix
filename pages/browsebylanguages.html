@@ -1,0 +1,689 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.cdnfonts.com/css/netflix-font" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<title>Mylist</title>
+<style>
+  
+
+
+
+
+   
+body{
+  background-color:#000000;
+  font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+  
+  
+}
+ .f{
+          
+color: white;
+ font-size: 325px;
+ font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+ font-weight: 800;
+ word-wrap: break-word;
+ text-shadow:rgb(89, 89, 89);
+        }
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+           
+            color:white;
+          }
+          
+          li {
+            float: left;
+          }
+          .glow{
+            background-color: transparent;
+            color: #fff;
+            font-weight: bold;
+            text-shadow:0px 0px 7px #ffffff;
+          }
+          li a {
+            margin-left: 15px;
+            display: block;
+            color:white;
+           
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+          }
+          .nav{
+            background-color: transparent;
+          }
+          
+          .nav li a:hover {
+            background-color: transparent;
+            
+            
+          }
+          
+          li a:hover {
+           
+            background-color: transparent;
+            color: white; 
+            
+            
+          }
+          /* width */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+      }
+      
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #888; 
+      }
+      .im-g{
+          margin-top: 10px;
+      }
+    
+      
+      * Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background:black; 
+      }
+      .bottom-left {
+        position: absolute;
+        top:350px;
+        left: 100px;
+        color: #ffffff;
+      }
+      .column {
+  float: left;
+  width:250px;
+  height: 3%;
+  padding: 5px;
+  
+}
+
+button:hover{
+  background-color: rgba(
+255,
+255,
+255,
+0.75
+  );
+}
+.f{
+
+  -webkit-text-stroke: 4px rgb(89, 89, 89);;
+  font-family: 'Netflix Font', sans-serif;
+  font-size: 270px;
+                                              
+  
+  display: inline-block;
+}
+       
+.footer{
+
+width: fit-content;
+margin-left: 300px;
+}
+.footer li {
+list-style-type: none;
+text-align: center;
+
+}
+
+.footer li a {
+text-decoration: none;
+color:#c7c7c7; 
+margin-left: 0px;
+font-size: 15px;
+/* Added text spacing */
+}
+
+.footer img{
+width: 35px;
+height: 29px;
+
+
+}
+.footer-link{
+padding-right: 100px;
+}
+.heading-slide{
+display: none;
+}
+.heading:hover .heading-slide {
+color: #54b9c5;
+
+margin-top: -30px;
+margin-left: 10px;
+
+  transition: max-width 1s, opacity 1s, transform .75s;
+display: inline-block;
+}
+.dropdown1{
+    width: max-content;
+    margin-top: -35px;
+    margin-left: 350px;
+}
+.dropbutton{
+    background-color: #000000;
+    color: white;
+    font-size: 16px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: none;
+    margin-left: 350px;
+    border-color: #ffffff;
+    border: 2px solid hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+
+.dropdown-content{
+  display: none;
+ 
+  background-color: #000000, opacity 90.0%;
+  width: 150px;
+  height: 1px;
+ padding-top: 5px;
+  padding-left: 5px;
+border:1px solid hsla(0, 0%, 100%, .15);
+    border-style:double;
+    border-top: none;
+}
+.dropbutton:hover .dropdown-content {
+  display: block;
+
+  transition-duration: 150ms;
+  
+}
+.dropdown2{
+    width: max-content;
+    margin-top: -35px;
+    margin-left: 350px;
+}
+.dropbutton2{
+    background-color: #000000;
+    color: white;
+    font-size: 16px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: none;
+    margin-left: 250px;
+    border-color: #ffffff;
+    border: 2px solid hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+
+.dropdown-content2{
+  display: none;
+ 
+  background-color: #000000, opacity 90.0%;
+  width: 150px;
+  height: 1px;
+ padding-top: 5px;
+  padding-left: 5px;
+border:1px solid hsla(0, 0%, 100%, .15);
+    border-style:double;
+    border-top: none;
+    
+    
+}
+.dropbutton2:hover .dropdown-content2 {
+  display:block;
+    
+  transition-duration: 150ms;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.dropdown4{
+    width: max-content;
+    margin-top: -35px;
+    margin-left: 350px;
+}
+.dropbutton1{
+    background-color: #000000;
+    color: white;
+    font-size: 16px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: none;
+    margin-left: 350px;
+    border-color: #ffffff;
+    border: 2px solid hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+.dropdown-content1{
+  display: none;
+ 
+  background-color: #000000, opacity 90.0%;
+  width: 150px;
+  height: 1px;
+ padding-top: 5px;
+  padding-left: 5px;
+border:1px solid hsla(0, 0%, 100%, .15);
+    border-style:double;
+    border-top: none;
+    
+    
+}
+.dropbutton1:hover .dropdown-content1 {
+  display:block;
+    
+  transition-duration: 150ms;
+  
+}
+.dropdown1{
+    width: max-content;
+    margin-top: -35px;
+    margin-left: 350px;
+}
+.dropbutton{
+    background-color: #000000;
+    color: white;
+    font-size: 16px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: none;
+    margin-left: 350px;
+    border-color: #ffffff;
+    border: 2px solid hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+
+.dropdown-content{
+  display: none;
+ 
+  background-color: #000000, opacity 90.0%;
+  width: 150px;
+  height: 1px;
+ padding-top: 5px;
+  padding-left: 5px;
+border:1px solid hsla(0, 0%, 100%, .15);
+    border-style:double;
+    border-top: none;
+}
+.dropbutton:hover .dropdown-content {
+  display: block;
+
+  transition-duration: 150ms;
+  
+}
+</style>
+    </head>
+    <body style="overflow-x: hidden;">
+        
+        <ul style="background-color: transparent;color: white;">
+            <div class="nav">
+              
+            <li class="im-g"><img src="../assets/images//Logos-Readability-Netflix-logo.jpeg" width="90px"height="50px"style="margin-top:-11px;"></li>
+            <!-- <div class="dropdown"> -->
+              <!-- <button class="dropbtn" style="width: 95px;background-color: #000000;color: white;border-color:#c7c7c7;border-style:double;margin-left: 15px;"><span style="margin-left: -5px;">MENU</span> <span style="color: #000000;">..</span><span >&#11206</span></button>
+              <div class="dropdown-content">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../pages/tvshows.html">TV Shows</a></li>
+                <li><a href="contact.asp">Movies</a></li>
+                <li><a href="about.asp">New&Popular</a></li>
+                <li><a href="about.asp">MyList</a></li>
+                <li><a href="about.asp">Browse by Languages</a></li>
+                <li><a href="pages/signin.html" class="Signin">Sign In</a></li>
+              </div>
+            </div> -->
+
+            <li style="background-color: transparent;"><a href="../index.html">Home</a></li>
+            <li ><a href="../pages/tvshows.html" >TV Shows</a></li>
+            <li ><a href="movies.html">Movies</a></li>
+            <li ><a href="news&popular.html">New&Popular</a></li>
+            <li ><a href="mylist.html">MyList</a></li>
+            <li  class="glow"><a href="browsebylanguages.html">Browse by Languages</a></li>
+            <li><a href="pages/signin.html" class="Signin">Sign In</a></li>
+           
+           <li> <button class="searchTab" style="color:white;background-color:transparent;margin-left: 400px;margin-top: 12px;margin-right:-15px;border: none;font-size: 20px;"><span class="	glyphicon glyphicon-search" style="color: b;"></span></button></li>
+            <li ><a href="about.asp" style="margin-top: 3px;">Children</a></li>
+            <li><button style="margin-top: 15px;color:white;background-color:transparent;border: none;font-size: 20px;" ><span class="	glyphicon glyphicon-bell" ></span></button></li>
+            <div class="account-dropdown-button" style="margin-top: 15px ;margin-left: 1350px;"><a href="/YourAccount" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false" aria-label="Santhosh – Account &amp; Settings"><span class="profile-link" role="presentation"><img class="profile-icon" src="https://occ-0-4994-2164.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABY20DrC9-11ewwAs6nfEgb1vrORxRPP9IGmlW1WtKuaLIz8VxCx5NryzDK3_ez064IsBGdXjVUT59G5IRuFdqZlCJCneepU.png?r=229" alt=""></span></a><span class="caret" role="presentation"></span></div>
+        
+        
+        </div>
+        </ul>
+     <br>
+     
+    <div>  
+   <h2 style="color: white;">Browse By Languages</h2>
+   <p style="margin-left: 520px;position:absolute;margin-top: -30px;color: white;">Select Your Preference</p>
+   <div class="dropdown1">
+   <div class="dropdown">
+    <div class="dropbutton" style="margin-left: 320px;">
+    <button type="button" style="background-color: #000;border: none;height: 5px;padding-bottom: none;">Original Languages<span style="padding-left: 5px;">&#11206</span></button>
+    <div class="dropdown-content">
+        <div><ul>
+
+        <li>Original Languages</li> <br>
+
+        <li>Subtitle</li><br>
+        <li>Dubbing</li></ul></div>
+    </div>
+</div>
+   </div>
+</div>
+<div class="dropdown2" style="margin-left: 520px;margin-top: -32px;">
+    <div class="dropdown3">
+     <div class="dropbutton1">
+     <button type="button" style="background-color: #000;border: none;height: 5px;padding-bottom: 5px">English<span style="padding-left: 150px;;">&#11206</span></button>
+     <div class="dropdown-content1">
+        <div>
+            <ul style="overflow-y: scroll;width: 230px;display: inline-block;">
+                <li>
+                    Indonesian
+                </li><br>
+                <li>
+                    Lebanese
+                </li><br>
+                <li>
+                    Malay
+                </li><br>
+                <li>
+                    Turkish
+                </li><br>
+                <li>
+                    English
+                </li><br>
+                <li>
+                    Japanese
+                </li><br>
+                <li>
+                    Spanish
+                </li><br>
+                <li>
+                    French
+                </li><br>
+                <li>
+                    Hindi
+                </li><br>
+                <li>
+                    Korean
+                </li><br>
+                <li>
+                    German
+                </li><br>
+                <li>
+                    Mandarin
+                </li><br>
+                <li>
+                    Italian
+                </li><br>
+                <li>
+                    Portuguese
+                </li><br>
+                <li>
+                    Cantonese
+                </li><br>
+                <li>
+                    Dutch
+                </li><br>
+                <li>
+                    Filipino
+                </li><br>
+                <li>
+                    Polish
+                </li><br>
+                <li>
+                    Swedish
+                </li><br>
+                <li>
+                    Arabic
+                </li><br>
+                <li>
+                    Tamil
+         
+            </ul>
+        </div>
+     </div>
+ </div>
+    </div>
+
+ </div>
+ <div >
+    <p style="color: white;margin-left: 1120px;margin-top: -25px;padding-right: 15px;">
+        Sort By
+    </p>
+   
+    <div class="dropdown4">
+    <div class="dropdown5">
+     <div class="dropbutton2" style="margin-left: 820px;">
+     <button type="button" style="background-color: #000;border: none;height: 5px;padding-bottom: none;">Suggestion For You<span style="padding-left: 50px;">&#11206</span></button>
+     <div class="dropdown-content2">
+         <div><ul>
+ 
+         <li>Suggestion For You</li> <br>
+ 
+         <li>Year Released</li><br>
+         <li>A-Z</li><br>
+         <li>Z-A</li><br>
+        </ul></div>
+     </div>
+ </div>
+    </div>
+ </div>
+ </div>
+</div>  
+
+   <br>
+   <br>
+   <br>
+   <br>
+          
+           
+    <div class="image-container">
+        <img src="../assets/images/index/1.jpg" alt="Snow" style="height: 133px;width:20%;" class="col-lg-4" >
+        <img src="../assets/images/index/2.jpg" alt="Snow" style="height: 133px;width:20%" class="col-lg-4">
+        <img src="../assets/images/index/3.jpg" alt="Snow" style="height: 133px;width:20%" class="col-lg-4">
+        <img src="../assets/images/index/5.jpg" alt="Snow" style="height: 133px;width:20%" class="col-lg-4">
+        <img src="../assets/images/index/6.jpg" alt="Snow" style="height: 133px;width:20%" class="col-lg-4">
+    </div>
+         
+      <br>
+     
+    
+    <div class="image-container" style="margin-top: 150px;">
+        <img src="../assets/images/index/7.jpg" alt="Snow" style="height: 133px;width:20%;" class="col-lg-4" style="margin-top: 150px;">
+        <img src="../assets/images/index/8.jpg" alt="Snow" style="height: 133px;width:20%" class="col-lg-4">
+        <img src="../assets/images/index/9.jpg" alt="Snow" style="height: 133px;width:20%" class="col-lg-4">
+        <img src="../assets/images/index/10.jpg" alt="Snow" style="height: 133px;width:20%" class="col-lg-4">
+        <img src="../assets/images/index/11.webp" alt="Snow" style="height: 133px;width:20%" class="col-lg-4">
+    </div>
+    <br>
+     
+    
+    <div class="image-container" style="margin-top: 150px;">
+        <img src="../assets/images/index/12.webp" alt="Snow" style="height: 133px;width:20%;" class="col-lg-4" style="margin-top: 150px;">
+        <img src="../assets/images/index/13.jpg" alt="Snow" style="height: 133px;width:20%" class="col-lg-4">
+        <img src="../assets/images/index/14.jpg" alt="Snow" style="height: 133px;width:20%" class="col-lg-4">
+        <img src="../assets/images/index/15.jpg" alt="Snow" style="height: 133px;width:20%" class="col-lg-4">
+        <img src="../assets/images/index/16.jpg" alt="Snow" style="height: 133px;width:20%" class="col-lg-4">
+    </div>
+    <br>
+     
+    
+    <div class="image-container" style="margin-top: 150px;">
+        <img src="../assets/images/index/17.jpg" alt="Snow" style="height: 133px;width:20%;" class="col-lg-4" style="margin-top: 150px;">
+        <img src="../assets/images/index/18.webp" alt="Snow" style="height: 133px;width:20%" class="col-lg-4">
+        <img src="../assets/images/index/19.webp" alt="Snow" style="height: 133px;width:20%" class="col-lg-4">
+        <img src="../assets/images/index/20.webp" alt="Snow" style="height: 133px;width:20%" class="col-lg-4">
+        <img src="../assets/images/index/21.jpg" alt="Snow" style="height: 133px;width:20%" class="col-lg-4">
+    </div>
+    <br>
+     
+    
+    <div class="image-container" style="margin-top: 150px;">
+        <img src="../assets/images/index/22.jpg" alt="Snow" style="height: 133px;width:20%;" class="col-lg-4" style="margin-top: 150px;">
+        <img src="../assets/images/index/23.webp" alt="Snow" style="height: 133px;width:20%" class="col-lg-4">
+        <img src="../assets/images/index/24.webp" alt="Snow" style="height: 133px;width:20%" class="col-lg-4">
+        <img src="../assets/images/index/25.webp" alt="Snow" style="height: 133px;width:20%" class="col-lg-4">
+        <img src="../assets/images/index/26.webp" alt="Snow" style="height: 133px;width:20%" class="col-lg-4">
+    </div>
+    <br>
+     
+    
+    <div class="image-container" style="margin-top: 150px;">
+        <img src="../assets/images/index/27.webp" alt="Snow" style="height: 133px;width:20%;" class="col-lg-4" style="margin-top: 150px;">
+        <img src="../assets/images/index/28.webp" alt="Snow" style="height: 133px;width:20%" class="col-lg-4">
+        <img src="../assets/images/index/29.webp" alt="Snow" style="height: 133px;width:20%" class="col-lg-4">
+        <img src="../assets/images/index/30.webp" alt="Snow" style="height: 133px;width:20%" class="col-lg-4">
+        <img src="../assets/images/index/40.webp" alt="Snow" style="height: 133px;width:20%" class="col-lg-4">
+    </div>
+    <br>
+     
+    
+    <div class="image-container" style="margin-top: 150px;">
+        <img src="../assets/images/index/42.webp" alt="Snow" style="height: 133px;width:20%;" class="col-lg-4" style="margin-top: 150px;">
+        <img src="../assets/images/index/43.webp" alt="Snow" style="height: 133px;width:20%" class="col-lg-4">
+        <img src="../assets/images/index/44.jpg" alt="Snow" style="height: 133px;width:20%" class="col-lg-4">
+        <img src="../assets/images/index/45.jpg" alt="Snow" style="height: 133px;width:20%" class="col-lg-4">
+        <img src="../assets/images/index/46.jpg" alt="Snow" style="height: 133px;width:20%" class="col-lg-4">
+    </div>
+    <br>
+     
+    
+    <div class="image-container" style="margin-top: 150px;">
+        <img src="../assets/images/index/47.webp" alt="Snow" style="height: 133px;width:20%;" class="col-lg-4" style="margin-top: 150px;">
+        <img src="../assets/images/index/48.webp" alt="Snow" style="height: 133px;width:20%" class="col-lg-4">
+        <img src="../assets/images/index/79.webp" alt="Snow" style="height: 133px;width:20%" class="col-lg-4">
+        <img src="../assets/images/index/50.webp" alt="Snow" style="height: 133px;width:20%" class="col-lg-4">
+        <img src="../assets/images/index/51.webp" alt="Snow" style="height: 133px;width:20%" class="col-lg-4">
+    </div>
+    
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> 
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="footer">
+        <div class="footer-images">
+            <img src="../assets/images/facebook.jpg" style="margin-left:10px ;height: 55px;margin-top: -13px;" alt="yotube">
+          <img src="../assets/images/yotube.jpg" style="margin-left:10px ;height: 55px;margin-top: -13px;" alt="yotube">
+          <img src="../assets/images/download (2).png" style="margin-top: -11px;" alt="insta">
+          <img src="../assets/images/28 (2).jpg" style="margin-top: -11px;" alt="insta">
+         
+        </div>
+        <div class="footer-links" >
+          <ul>
+            <li>
+              <a href="index.html" class="footer-link">Audio Description</a>
+            </li>
+            <li>
+              <a href="tvshows.html" class="footer-link">Help center</a>
+            </li>
+            <li>
+              <a href="tvshows.html" class="footer-link">Gift Cards</a>
+            </li>
+            <li>
+              <a href="tvshows.html" class="footer-link">Media Center</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-links" >
+          <ul>
+            <li>
+              <a href="index.html" class="footer-link">Investor Relations</a>
+            </li>
+            <li>
+              <a href="tvshows.html" class="footer-link">Jobs</a>
+            </li>
+            <li>
+              <a href="tvshows.html" class="footer-link" style="padding-left: 65px;">Terms of Use</a>
+            </li>
+            <li>
+              <a href="tvshows.html" class="footer-link" style="margin-left: -20px;">Privacy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-links" style="padding-right: auto;">
+          <ul>
+            <li>
+              <a href="index.html" class="footer-link">Legal Notices</a>
+            </li>
+            <li>
+              <a href="tvshows.html" class="footer-link" style="margin-left: 30px;">Cookies Preference</a>
+            </li>
+            <li>
+              <a href="tvshows.html" class="footer-link" style="margin-left: -50px;" >Corporate Information</a>
+            </li>
+            <li>
+              <a href="tvshows.html" class="footer-link" style="margin-left: -85px;">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <br>
+        <br>
+      <div >
+        <button style="padding: 6px;width: 93px;height: 30px;font-size: 13px;color: #808080;background-color: #000;border-color: #808080;border-style: double;padding-bottom: 18px;margin-left: 15px;">Service Code</button>
+        <br>
+      
+      </div>
+      <br>
+      <br>
+      <p style="margin-left: 15px;">© 1997-2023 Netflix,Inc.</p>
+      </div>
+      
+     
+
+
+  </body>
+
+</html>
